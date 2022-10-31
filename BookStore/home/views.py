@@ -12,9 +12,9 @@ class BookList(ListAPIView):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
-class PublisherList(ListAPIView):
-    queryset = Publisher.objects.all()
-    serializer_class = PublisherSerializer
+class BookPost(CreateAPIView):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
 
 class AuthorList(ListAPIView):
     queryset = Author.objects.all()
@@ -23,3 +23,11 @@ class AuthorList(ListAPIView):
 class AuthorPost(CreateAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
+
+class PublisherList(ListAPIView):
+    queryset = Publisher.objects.all()
+    serializer_class = PublisherSerializer
+
+class PublisherPost(CreateAPIView):
+    queryset = Publisher.objects.all()
+    serializer_class = PublisherSerializer
